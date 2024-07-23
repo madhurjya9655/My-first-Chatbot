@@ -31,12 +31,12 @@ def get_response():
     })
 
 def generate_response(message):
-    # Check for simple patterns first
+ 
     for pattern, responses in patterns:
         if re.search(pattern, message.lower()):
             return random.choice(responses)
     
-    # If no pattern matches, use GPT-3.5-turbo
+
     try:
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
