@@ -6,10 +6,10 @@ import openai
 
 app = Flask(__name__)
 
-# Set up OpenAI API key
+
 openai.api_key = 'api key '
 
-# Simple pattern-response pairs for basic interactions
+
 patterns = [
     (r'\b(hi|hello|hey)\b', ['Hello!', 'Hi there!', 'Hey!']),
     (r'bye|goodbye', ['Goodbye!', 'See you later!', 'Bye!']),
